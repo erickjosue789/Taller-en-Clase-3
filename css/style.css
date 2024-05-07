@@ -1,0 +1,219 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 90px;
+    background-color: #d35400; /* Color de fondo más cálido */
+}
+
+header {
+    top: 20px; /* Posicionamiento superior */
+    left: 0; /* Posicionamiento izquierdo */
+    width: 15%; /* Ancho del menú */
+    height: 150vh; /* Altura del menú (100% del viewport) */
+    transition: all 0.3s ease; /* Animación de transición para suavizar los cambios */
+
+    background-color: #d35400;
+    color: white;
+    padding: 20px 0px; /* Padding reducido */
+}
+
+h1 {
+    text-align: center;
+    display:block;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    display: block; /* Ocupa todo el ancho disponible */
+    padding: 10px 30px; /* Padding para cada enlace */
+    text-decoration: none; /* Elimina la decoración por defecto */
+    color: #fff; /* Color del texto de los enlaces */
+    transition: color 0.3s ease; /* Animación de transición para el color */
+}
+
+nav a:hover{
+    background-color: #000000; /* Color marrón para la cabecera */
+    padding: 10px 60px;
+    transition: background-color 0.5s ease; /* Animación de transición para el color */
+    transition: padding 0.3s ease; /* Animación de transición para el color */
+    font-weight: 600;
+}
+
+main {
+    width: 85%;
+    padding: 0px;
+    background-color: #fdebd0; /* Color de fondo más claro para el contenido principal */
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #d35400; /* Color naranja para los títulos */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: none;
+    padding: 8px;
+    text-align: left;
+}
+
+form {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+}  
+
+.contenedor{
+    display:flex;
+    height: 100%;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea tres columnas */
+    gap: 10px; /* Espacio entre imágenes */
+    margin: 20px 0; /* Margen arriba y abajo para separación */
+}
+
+.grid-galeria img {
+    width: 100%; /* Asegura que las imágenes se escalen correctamente */
+    height: 200px; /* Mantiene la proporción de las imágenes */
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+}
+
+
+footer {
+    background-color: #b33c00;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.title{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.26);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background-image: linear-gradient(to right, #ff7b00, #fc9c30);
+    transition: all 0.3s ease; /* Animación de transición para el color */
+}
+
+.title h1{
+    margin-bottom: 0;
+}
+
+.title div{
+    text-align: center;
+    color: #fff;
+    width: 100%;
+}
+
+#inicio{
+    background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D'); /* Reemplaza con la URL de tu imagen */
+    background-size: cover;
+    background-position: center; 
+    color: white; 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.815); 
+    padding: 60px 30px;
+}
+
+#inicio h2{
+    color: #e98c35;
+    text-align: left;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+
+#menu, #nosotros, #contacto, #galeria{
+    padding: 10px 30px;
+    margin-bottom: 60px;
+}
+
+
+#contacto{
+    text-align: center;
+}
+
+.form-container{
+    font-weight: 600;
+    text-align: left;
+    display: flex; /* Usamos flexbox para facilitar la alineación */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    height: 300px;
+    padding-top: 40px;
+}
+
+.form-container form{
+    width: 70%; /* Ancho del formulario, ajusta según necesites */
+}
+
+.form-container form input,
+.form-container form textarea{
+   
+   width: 100%;
+   border: 0;
+   background-color: #d4be943b;
+   margin-bottom: 20px;
+   padding: 10px 20px;
+}
+
+.form-container form button{
+    background-color: #fc9c30;
+    border: 0;
+    border-radius: 50px;
+    padding: 10px 30px;
+}
+
+.precio{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #e95b14;
+    font-size: 20px;
+}
+
+@media (max-width: 480px) { /* Dispositivos móviles */
+    header{
+        display: none;
+    }
+    
+    main{
+        width: 100%;
+    }
+    
+    .grid-galeria img {
+        height: 100px; /* Mantiene la proporción de las imágenes */
+    }
+}
